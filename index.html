@@ -17,6 +17,9 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Тест DMV Калифорнии на русском — 438 вопросов">
     <meta name="twitter:description" content="Бесплатная практика для подготовки к письменному тесту DMV Калифорнии на русском языке.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=PT+Serif:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script type="application/ld+json">
       {
@@ -60,9 +63,20 @@
   </head>
   <body>
     <main class="shell">
+      <header class="site-header">
+        <a class="wordmark" href="/" aria-label="Тренажёр DMV Калифорния — на главную">
+          <span class="wordmark__badge">CA</span>
+          <span>
+            <strong>DMV / практика</strong>
+            <small>Калифорния · категория C</small>
+          </span>
+        </a>
+        <a class="site-header__link" href="#guide-title">Как готовиться <span aria-hidden="true">↓</span></a>
+      </header>
+
       <section class="hero" aria-labelledby="page-title">
         <div>
-          <p class="eyebrow">DMV Калифорния, категория C</p>
+          <p class="eyebrow">Бесплатный тренажёр · California · Class C</p>
           <h1 id="page-title">Тренажер теста DMV на русском</h1>
           <p class="lead">438 вопросов: официальные пробные вопросы DMV плюс расширенная практика из найденных наборов по справочнику. Реальный закрытый банк экзамена DMV не публикует.</p>
         </div>
@@ -74,6 +88,7 @@
       </section>
 
       <section class="toolbar" aria-label="Настройки теста">
+        <p class="toolbar__title">Настройте сессию</p>
         <label>
           Набор
           <select id="testSelect">
@@ -96,7 +111,7 @@
         <button id="resetMistakesBtn" type="button" class="ghost">Очистить ошибки</button>
       </section>
 
-      <section class="quiz" aria-label="Вопросы">
+      <section class="quiz" id="quiz" aria-label="Вопросы">
         <div class="progress">
           <div id="progressBar"></div>
         </div>
