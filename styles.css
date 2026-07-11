@@ -347,6 +347,52 @@ button.ghost {
   line-height: 1.55;
 }
 
+.guide {
+  margin-top: 24px;
+  padding: 34px 42px;
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  box-shadow: 0 10px 34px rgba(17, 24, 39, 0.05);
+}
+
+.guide h2,
+.guide h3 {
+  margin: 0;
+  line-height: 1.2;
+}
+
+.guide h2 {
+  font-size: clamp(26px, 3vw, 34px);
+}
+
+.guide h3 {
+  margin-top: 28px;
+  font-size: 21px;
+}
+
+.guide p {
+  max-width: 840px;
+  margin: 16px 0 0;
+  color: var(--muted);
+}
+
+.guide ol {
+  margin: 16px 0 0;
+  padding-left: 24px;
+  color: var(--muted);
+}
+
+.guide li + li {
+  margin-top: 8px;
+}
+
+.guide a,
+.sources a {
+  color: var(--blue-dark);
+  font-weight: 700;
+}
+
 .sources {
   max-width: 880px;
   margin: 30px auto 0;
@@ -395,8 +441,12 @@ body.is-started .toolbar {
   box-shadow: none;
 }
 
-body.is-started .sources {
+body.is-started .guide {
   order: 5;
+}
+
+body.is-started .sources {
+  order: 6;
 }
 
 body.is-started .eyebrow {
@@ -509,6 +559,10 @@ body.is-started .toolbar label:first-child {
   }
 
   .question {
+    padding: 26px;
+  }
+
+  .guide {
     padding: 26px;
   }
 

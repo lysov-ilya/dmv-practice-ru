@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dmv-practice-ru.vercel.app/sitemap.xml
