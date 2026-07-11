@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Тренажер DMV Калифорния</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">DMV Калифорния, категория C</p>
+          <h1 id="page-title">Тренажер теста DMV на русском</h1>
+          <p class="lead">438 вопросов: официальные пробные вопросы DMV плюс расширенная практика из найденных наборов по справочнику. Реальный закрытый банк экзамена DMV не публикует.</p>
+        </div>
+        <div class="score-card" aria-live="polite">
+          <span class="score-card__label">Текущий результат</span>
+          <strong id="liveScore">0 / 0</strong>
+          <span id="livePercent">Начните тест</span>
+        </div>
+      </section>
+
+      <section class="toolbar" aria-label="Настройки теста">
+        <label>
+          Набор
+          <select id="testSelect">
+            <option value="all">Все вопросы</option>
+            <option value="official">Официальные 40 DMV</option>
+            <option value="Набор 108">Дополнительный набор 108</option>
+            <option value="Набор 290">Дополнительный набор 290</option>
+            <option value="Тест 1">Тест 1</option>
+            <option value="Тест 2">Тест 2</option>
+            <option value="Тест 3">Тест 3</option>
+            <option value="Тест 4">Тест 4</option>
+            <option value="mistakes">Только ошибки</option>
+          </select>
+        </label>
+        <label class="check">
+          <input id="shuffleToggle" type="checkbox" checked>
+          Перемешать
+        </label>
+        <button id="restartBtn" type="button">Новый тест</button>
+        <button id="resetMistakesBtn" type="button" class="ghost">Очистить ошибки</button>
+      </section>
+
+      <section class="quiz" aria-label="Вопросы">
+        <div class="progress">
+          <div id="progressBar"></div>
+        </div>
+        <div id="questionHost"></div>
+      </section>
+
+      <section class="results" id="results" hidden>
+        <h2>Итог</h2>
+        <p id="resultText"></p>
+        <button id="reviewBtn" type="button">Пройти ошибки</button>
+      </section>
+
+      <footer class="sources">
+        Источники: официальные русские пробные тесты DMV Калифорнии 1-4, русский справочник водителя, найденные наборы joshua-burnell-1/ca-dmv-prep и DarrellTang/permit-gg. Официальные ответы DMV проверены через результат формы DMV 8 июля 2026; дополнительные вопросы являются неофициальной практикой по справочнику.
+      </footer>
+    </main>
+
+    <script src="questions.js"></script>
+    <script src="extra_questions.js"></script>
+    <script src="permit_gg_questions.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
